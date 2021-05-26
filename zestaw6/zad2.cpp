@@ -10,6 +10,7 @@ int number;
 cin>>number;
 if(number>20)return -1;
 
+int hcsk;
 
 
 int A[number];

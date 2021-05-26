@@ -2,7 +2,10 @@
 #include<iostream>
 using namespace std;
 
+
 int main(){
+
+int hcsk;
 
 int A[]={2,6,5,1,3};
 int *p;
