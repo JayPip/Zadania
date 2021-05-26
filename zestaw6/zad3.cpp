@@ -17,10 +17,20 @@ int A[number];
 int *p;
 p=A;
 
+int sum =0;
+
 for(int i =0; i< number; i++){
-cin>>*p;
-if(*p<0)*p=-*p;
-p++;
+    if(sum<100){
+        cin>>*p;
+        sum+=*p;
+        p++;
+    }
+
+    else{
+        *p=0;
+    
+        p++;
+    };
 }
 
 

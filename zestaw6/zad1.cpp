@@ -7,6 +7,8 @@ int main(){
 int number;
 
 
+int hcsk;
+
 
 cin>>number;
 if(number>20)return -1;

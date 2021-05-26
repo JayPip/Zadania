@@ -1,4 +1,5 @@
 #include<iostream>
+
 using namespace std;
 #include<iostream>
 #include<cmath>
@@ -6,9 +7,11 @@ using namespace std;
 #include<ctime>
 
 int main(){
- srand (time(NULL));
+
 int number;
 cin>>number;
+
+ srand (time(NULL));
 
 int A[number];
 int *p;
@@ -20,8 +23,17 @@ cout<<*p<<endl;
 p++;
 }
 
+p=A;
+int ctr=0;
 
+for(int i =0; i< number; i++){
+if(*p%2 == 0)
+ctr++;
 
+p++;
+}
+
+cout<<ctr<<endl;
 
 return 0;
 }
