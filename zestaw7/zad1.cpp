@@ -1,9 +1,12 @@
 #include<iostream>
-
+#include<cmath>
+#include<cstdlib>
+#include<ctime>
 using namespace std;
 
 
 int main(){
+ srand (time(NULL));
 
 
 int size = 3;

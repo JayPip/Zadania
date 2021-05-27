@@ -1,9 +1,13 @@
 #include<iostream>
 #include <bits/stdc++.h>
+#include<cmath>
+#include<cstdlib>
+#include<ctime>
 using namespace std;
 
 
 int main(){
+ srand (time(NULL));
 
 int size1;
 int size2;

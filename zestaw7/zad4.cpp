@@ -10,7 +10,6 @@ int main(){
 
 int size1;
 int size2;
- srand (time(NULL));
 
 cin>>size1>>size2;
 
@@ -32,32 +31,7 @@ for(int i = 0; i< size1; i++){
 xp++;
 }
 
- int *prod = new int[size1+size2-1];
  
-   
-   for (int i = 0; i<size1+size2-1; i++)
-     prod[i] = 0;
- 
-    xp = x;
-    yp = y;
- 
-  
-   for (int i=0; i<size1; i++)
-   {
-     for (int j=0; j<size2; j++){
-        prod[i+j] += *xp*(*yp);
-        yp++;
-     }
-        xp++;
-
-   }
- 
-   for(int i = 0 ; i< size1+size2-1;i++)cout<<prod[i]<<endl;
-
-
-
-
-
 
 return 0;
 }
