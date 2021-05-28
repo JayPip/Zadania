@@ -6,32 +6,50 @@
 using namespace std;
 
 
+int factorial(int number){
+    int fact = 1;
+    for(int i = 1; i<=number;i++){
+        
+        fact*=i;
+
+    }
+
+    return fact;
+
+}
+
+int Newton(int n, int k){
+    return factorial(n)/(factorial(k)*factorial(n-k));
+
+}
+
+
+
 int main(){
 
+
 int size1;
-int size2;
-
-cin>>size1>>size2;
 
 
-int x[size1];
-int y[size2];
-
-int *xp = x;
-int *yp = y;
+cin>>size1;
 
 
-for(int i = 0; i< size2; i++){
-*yp =rand()%21 - 10;
-yp++;
+int **S = new int*[size1];
+
+for(int i= 0; i<size1; i++){
+    *(S+i) = new int [i+1];
+    
 }
 
-for(int i = 0; i< size1; i++){
-*xp = rand()%21 -10;
-xp++;
-}
+for(int i=0;i<size1;i++){
+        for(int j=0;j<i+1;j++){
+            *(*(S+i)+j)=Newton(i,j);
+            cout<<*(*(S+i)+j)<<" ";
+        }
+       cout<<endl;
+    }
 
- 
 
+delete [] S;
 return 0;
 }
